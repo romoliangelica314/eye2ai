@@ -1,2 +1,7 @@
 # eye2ai
-Eye2AI is a machine learning prototype for scoring police–civilian interactions from structured behavioral and situational variables. It predicts interaction quality, highlights the factors most associated with escalation or de-escalation, and connects to a voice-agent layer for real-time interaction monitoring and cue generation.
+Eye2AI started from a simple question: after seeing so much publicly available bodycam footage online, especially on YouTube, could that material be used in a constructive way rather than only as inflammatory content or entertainment. The project explores whether interaction patterns visible in those encounters can be translated into something that helps officers respond more calmly, clearly, and compassionately in difficult moments.
+
+As a first step, around thirty bodycam transcripts were collected for reference in order to get a rough sense of the language, pacing, conflict patterns, and recurring points of escalation in real interactions. Since there is no ready-made dataset for this exact use case, generative AI was then used to build a deliberately imperfect synthetic dataset based on selected behavioral and situational features such as aggression, compliance, confusion, intoxication, officer tone, and environmental risk. That dataset was used to train and evaluate an initial machine learning baseline focused on predicting overall interaction quality and identifying which variables matter most.
+
+On top of that baseline, the project includes a  Python layer that can score structured interaction states and produce simple tactical cues, alongside an ElevenLabs voice agent for monitoring an interaction in real time and generating spoken prompts. The current version is a proof of concept.
+
